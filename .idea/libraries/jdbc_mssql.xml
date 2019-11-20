@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="jdbc-mssql">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../jdbc-mssql.jar" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../jdbc-mssql.jar" recursive="false" />
+  </library>
+</component>
