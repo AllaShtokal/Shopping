@@ -27,28 +27,27 @@ public final class Husband {
     }
 
 
-    public ArrayList<Product> shopping(ArrayList<Product> order,
-                                       ArrayList<Shop> shopList) {
+    public ArrayList<Product> shopping(ArrayList<Product> order,ShopList
+                                        shopList) {
+        ArrayList<Product> productsInTotalList = new ArrayList<>();
+        productsInTotalList.addAll(shopList.getAllProducts(shopList.getShops()));
 
-        for (Shop shop : shopList) {
-            ArrayList<Product> products = new ArrayList<>();
-           products.addAll(shop.getProducts());
-            for (Product product: products)
+            for (Product product: order)
             {
-                for (Product productInTotallist: products)
+                for (Product productInTotallist: productsInTotalList)
                 {
-
+                   if(productInTotallist.name.equals(product.name) &&
+                      productInTotallist.price == product.price)
+                       listForWife.add(product);
                 }
 
             }
-        }
+
 
         return listForWife;
     }
 
-    public ArrayList<Product> giveResultListToWife() {
-        return new ArrayList<Product>();
-    }
+
 
 
 }

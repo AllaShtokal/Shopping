@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 
 public final class Wife {
-    Husband husband;
+    //Husband husband;
     public ArrayList<Product> finalListFromHusband;
     public ArrayList<Product> order;
 

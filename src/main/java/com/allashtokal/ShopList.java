@@ -31,4 +31,12 @@ public class ShopList {
         shops.add(techShop);
         return shops;
     }
+    public ArrayList<Product> getAllProducts(ArrayList<Shop> shops){
+        ArrayList<Product> products = new ArrayList<>();
+        for (Shop shop: shops
+             ) { products.addAll(shop.getProducts());
+
+        }
+        return products;
+    }
 }
