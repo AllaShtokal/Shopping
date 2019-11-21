@@ -14,6 +14,8 @@ public class Main {
         Husband husband = new Husband();
         Wife wife = new Wife();
 
+        wife.printList(wife.giveOrder());
+        wife.printList(husband.getTotalListOfProducts());
         wife.printList(husband.shopping(wife.giveOrder(),shopList));
     }
 }

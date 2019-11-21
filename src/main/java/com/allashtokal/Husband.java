@@ -15,13 +15,16 @@ public final class Husband {
 
     Wife wife;
     ShopList shopList;
-    public ArrayList<Product> totalListOfProducts;
+
     public ArrayList<Product> listForWife;
 
     public ArrayList<Product> getTotalListOfProducts() {
-        return totalListOfProducts;
+        ArrayList<Product> productsInTotalList = new ArrayList<>();
+        productsInTotalList.addAll(shopList.getAllProducts(shopList.getShops()));
+        return productsInTotalList;
 
     }
+
 
     public Husband() {
     }
@@ -30,7 +33,7 @@ public final class Husband {
     public ArrayList<Product> shopping(ArrayList<Product> order,ShopList
                                         shopList) {
         ArrayList<Product> productsInTotalList = new ArrayList<>();
-        productsInTotalList.addAll(shopList.getAllProducts(shopList.getShops()));
+        productsInTotalList.addAll(getTotalListOfProducts());
 
             for (Product product: order)
             {
