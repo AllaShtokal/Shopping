@@ -14,14 +14,12 @@ import java.util.ArrayList;
 public final class Husband {
 
     Wife wife;
-    ShopList shopList =new ShopList();
+    private ShopList shopList = new ShopList();
 
-    public ArrayList<Product> listForWife = new ArrayList<>();
+    private ArrayList<Product> listForWife = new ArrayList<>();
 
-    public ArrayList<Product> getTotalListOfProducts() {
-        ArrayList<Product> productsInTotalList = new ArrayList<>();
-        productsInTotalList.addAll(shopList.getAllProducts(shopList.getShops()));
-        return productsInTotalList;
+    ArrayList<Product> getTotalListOfProducts() {
+        return new ArrayList<>(shopList.getAllProducts(shopList.getShops()));
 
     }
 
@@ -29,28 +27,33 @@ public final class Husband {
     public Husband() {
     }
 
+    int totalPrice() {
+        int sum = 0;
+        for (Product product : listForWife
+        ) {
+            sum += product.price;
 
-    public ArrayList<Product> shopping(ArrayList<Product> order,ShopList
-                                        shopList) {
-        ArrayList<Product> productsInTotalList = new ArrayList<>();
-        productsInTotalList.addAll(getTotalListOfProducts());
+        }
+        return sum;
+    }
 
-            for (Product product: order)
-            {
-                for (Product productInTotallist: productsInTotalList)
-                {
-                   if(productInTotallist.name.equals(product.name) &&
-                      productInTotallist.price == product.price)
-                       listForWife.add(product);
-                }
 
+    public ArrayList<Product> shopping(ArrayList<Product> order, ShopList
+            shopList) {
+        ArrayList<Product> productsInTotalList = new ArrayList<>(getTotalListOfProducts());
+
+        for (Product product : order) {
+            for (Product productInTotallist : productsInTotalList) {
+                if (productInTotallist.name.equals(product.name) &&
+                        productInTotallist.price == product.price)
+                    listForWife.add(product);
             }
+
+        }
 
 
         return listForWife;
     }
-
-
 
 
 }

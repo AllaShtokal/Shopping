@@ -11,6 +11,10 @@ public class GroceryShop extends Shop {
 
     public GroceryShop() {
         addProduct("Bread", 10);
+        addProduct("Sausage", 10);
+        addProduct("Butter ", 10);
+        addProduct("Milk  ", 300);
+        addProduct("Potato  ", 40);
 
     }
 }

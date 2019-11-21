@@ -10,7 +10,10 @@ package com.allashtokal.shops;
 public class TechShop extends Shop {
 
     public TechShop(){
-        addProduct("Sony", 100);
+        addProduct("Sony", 555);
+        addProduct("Samsung", 15);
+        addProduct("Lenovo", 15);
+        addProduct("Apple", 8);
 
     }
 

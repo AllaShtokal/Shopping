@@ -13,14 +13,15 @@ import java.util.ArrayList;
 
 public final class Wife {
     //Husband husband;
-    public ArrayList<Product> finalListFromHusband;
+    private ArrayList<Product> finalListFromHusband;
 
 
-    public ArrayList<Product> giveOrder() {
+    ArrayList<Product> giveOrder() {
         ArrayList<Product> order = new ArrayList<>();
         order.add(new Product("Sony", 555));
         order.add(new Product("Bread", 15));
         order.add(new Product("Lenovo", 15));
+        order.add(new Product("Onion", 85));
         return order;
     }
 
@@ -28,12 +29,17 @@ public final class Wife {
         return finalListFromHusband;
     }
 
-    public void printList(ArrayList<Product> arr) {
+     void printList(ArrayList<Product> arr) {
         for (Product product : arr) {
             System.out.println(product.name + " -  " + product.price);
 
 
         }
+
+
+    }
+     void getTotalPrice(Husband h){
+        System.out.println("Total price is: " + h.totalPrice());
 
     }
 
