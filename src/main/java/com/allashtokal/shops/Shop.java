@@ -19,7 +19,8 @@ public abstract class Shop  {
         return listOfProducts;
     }
 
-    public void addProduct(String s, Integer price) {
+    public void addProduct(String s, Integer price)
+    {
         listOfProducts.add(new Product(s, price));
     }
 

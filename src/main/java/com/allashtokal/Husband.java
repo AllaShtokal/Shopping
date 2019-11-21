@@ -1,5 +1,7 @@
 package com.allashtokal;
 
+import com.allashtokal.shops.Shop;
+
 import java.util.ArrayList;
 
 /**
@@ -12,22 +14,41 @@ import java.util.ArrayList;
 public final class Husband {
 
     Wife wife;
-
+    ShopList shopList;
     public ArrayList<Product> totalListOfProducts;
     public ArrayList<Product> listForWife;
 
-    public ArrayList<Product> getOrder(ArrayList<Product> order) {
-        return order;}
+    public ArrayList<Product> getTotalListOfProducts() {
+        return totalListOfProducts;
 
-    public ArrayList<Product> Shopping(ArrayList<Product> order, ShopsList list){
-        //проходимся по всем магазинам
-        // добавляем товари в listForWife которые нам нужны
+    }
+
+    public Husband() {
+    }
+
+
+    public ArrayList<Product> shopping(ArrayList<Product> order,
+                                       ArrayList<Shop> shopList) {
+
+        for (Shop shop : shopList) {
+            ArrayList<Product> products = new ArrayList<>();
+           products.addAll(shop.getProducts());
+            for (Product product: products)
+            {
+                for (Product productInTotallist: products)
+                {
+
+                }
+
+            }
+        }
 
         return listForWife;
-        }
-    public void giveResultListToWife(){}
+    }
 
-
+    public ArrayList<Product> giveResultListToWife() {
+        return new ArrayList<Product>();
+    }
 
 
 }
