@@ -14,13 +14,13 @@ import java.util.ArrayList;
 public final class Wife {
     //Husband husband;
     public ArrayList<Product> finalListFromHusband;
-    public ArrayList<Product> order;
+
 
     public ArrayList<Product> giveOrder() {
+        ArrayList<Product> order = new ArrayList<>();
+        order.add(new Product("Sony", 555));
         order.add(new Product("Bread", 15));
-        order.add(new Product("Bread", 15));
-        order.add(new Product("Bread", 15));
-        order.add(new Product("Bread", 15));
+        order.add(new Product("Lenovo", 15));
         return order;
     }
 

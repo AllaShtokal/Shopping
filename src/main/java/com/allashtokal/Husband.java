@@ -14,9 +14,9 @@ import java.util.ArrayList;
 public final class Husband {
 
     Wife wife;
-    ShopList shopList;
+    ShopList shopList =new ShopList();
 
-    public ArrayList<Product> listForWife;
+    public ArrayList<Product> listForWife = new ArrayList<>();
 
     public ArrayList<Product> getTotalListOfProducts() {
         ArrayList<Product> productsInTotalList = new ArrayList<>();
