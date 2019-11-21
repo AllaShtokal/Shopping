@@ -13,6 +13,7 @@ public class Main {
         ShopList shopList = new ShopList();
         Husband husband = new Husband();
         Wife wife = new Wife();
+
         wife.printList(husband.shopping(wife.giveOrder(),shopList));
     }
 }
