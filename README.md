@@ -1,5 +1,5 @@
 # Shopping
-Программа Shopping.
+Shopping.
 
 There is a set of products that you need to buy.
 There is a home appliance store and a grocery store, each with its own range of products containing the name and price. 
