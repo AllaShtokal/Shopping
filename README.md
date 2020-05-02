@@ -19,7 +19,7 @@ Apple - 300
 Aser - 40
 Bread - 110
 Sausage - 80
-Butter - 70
+Butter - 70 
 Milk - 300
 Potato - 40
 Bought:
